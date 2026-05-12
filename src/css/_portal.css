@@ -1,0 +1,137 @@
+/* ── Donor / Member Portal Login ──────────────────────── */
+
+.portal-login {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  background: #f0f2f5;
+  padding: 1.5rem;
+}
+
+.portal-login-box {
+  width: 100%;
+  max-width: 420px;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.portal-login-box h2 {
+  font-size: 1.25rem; font-weight: 700;
+  color: var(--text); text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.portal-login-box > p {
+  font-size: 0.82rem; color: var(--text-dim);
+  text-align: center; margin-bottom: 1.75rem;
+}
+
+.portal-login-logo {
+  width: 52px; height: 52px;
+  border-radius: var(--radius);
+  background: var(--primary);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.portal-login-logo span { font-size: 1.2rem; font-weight: 900; color: #fff; }
+
+.portal-login-field {
+  margin-bottom: 1rem;
+}
+
+.portal-login-field label {
+  display: block;
+  font-size: 0.72rem; font-weight: 600; color: var(--text-dim);
+  text-transform: uppercase; letter-spacing: 0.5px;
+  margin-bottom: 0.35rem;
+}
+
+.portal-login-field input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.85rem; color: var(--text);
+  background: var(--bg);
+  transition: var(--transition);
+}
+
+.portal-login-field input:focus {
+  outline: none; border-color: var(--primary);
+  background: var(--bg-card); box-shadow: 0 0 0 3px var(--primary-bg);
+}
+
+.portal-login-msg {
+  font-size: 0.8rem; font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+}
+
+.portal-login-msg.error { background: var(--danger-bg); color: var(--danger); }
+.portal-login-msg.success { background: #ecfdf5; color: #059669; }
+
+.portal-login-footer {
+  text-align: center; margin-top: 1.25rem;
+  padding-top: 1rem; border-top: 1px solid var(--border);
+  font-size: 0.72rem; color: var(--text-light);
+}
+
+.portal-login-footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
+.portal-login-footer a:hover { text-decoration: underline; }
+
+/* ── Portal Authenticated Layout ──────────────────────── */
+
+.donor-portal {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.portal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 100;
+}
+
+.portal-header-left {
+  display: flex; align-items: center; gap: 0.75rem;
+}
+
+.portal-tabs {
+  display: flex; gap: 0.5rem; overflow-x: auto;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+/* ── Board Dashboard ──────────────────────────────────── */
+
+.board-dashboard {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.board-footer-notice {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: var(--radius);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .portal-login { padding: 1rem; }
+  .portal-login-box { padding: 2rem 1.5rem; }
+  .portal-header { padding: 0.75rem 1rem; flex-wrap: wrap; gap: 0.5rem; }
+  .portal-tabs { padding: 0.75rem 1rem; }
+  .board-dashboard { padding: 1rem; }
+}
